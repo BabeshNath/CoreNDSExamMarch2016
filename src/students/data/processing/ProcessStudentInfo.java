@@ -1,10 +1,13 @@
 package students.data.processing;
 
 import org.xml.sax.SAXException;
+import xml.parser.Student;
+import xml.parser.XmlReader;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-
+import java.util.*;
+import java.util.Set;
 public class ProcessStudentInfo {
 
 		/*
@@ -28,32 +31,44 @@ public class ProcessStudentInfo {
 		 */
 			public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 				//Path of XML data to be read.
-				String pathSelenium  = System.getProperty("user.dir") +"/src/xml/reader/selenium.xml";
-				String pathQtp = System.getProperty("user.dir") + "/src/xml/reader/qtp.xml";
+				String pathSelenium  = System.getProperty("user.dir") +"\\src\\xml\\parser\\selenium.xml";
+				String pathQtp = System.getProperty("user.dir") + "\\src\\xml\\parser\\qtp.xml";
 				String tag = "id";
 				
 				//Declare a Map with List<String> into it.
-				
+				Map<String, List<Student>> map =new HashMap<String,List<Student>>();
 				
 				/*Declare 2 ArrayList with Student data type to store Selenium student into one of the ArrayList and
 				  Qtp student into another ArrayList. */
-				
-				
+				List<Student> SeleniumStudents = new ArrayList<>();
+				List<Student> QTPStudents = new ArrayList<>();
 				
 				//Create XMLReader object.
-				
+				XmlReader reader = new XmlReader();
 				//Parse Data using parseData method and then store data into Selenium ArrayList.
-				
+				SeleniumStudents =reader.parseData(tag, pathSelenium);
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				
+				QTPStudents =reader.parseData(tag, pathQtp);
 				//add Selenium ArrayList data into map.
-			
+				map.put("Selenium",SeleniumStudents);
 				//add Qtp ArrayList data into map.
-		
+				map.put("QTP",QTPStudents);
 		      	
 				//Retrieve map data and display output.
+				//for(Map.Entry<String,String>course:map.entrySet()) {
+				//	System.out.println(course.getKey() + " " + course.getValue());
+				//}
 
-				
+				Set entries = map.entrySet();
+				Iterator iterator = entries.iterator();
+				while (iterator.hasNext()) {
+					Map.Entry entry = (Map.Entry) iterator.next();
+					String key = (String) entry.getKey();
+					Integer value = (Integer) entry.getValue();
+					System.out.println("Key: " + key + ", Value: " + value);
+
+
+				}
 			}
 
 }

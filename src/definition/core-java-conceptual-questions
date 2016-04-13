@@ -1,33 +1,130 @@
 Please answer the below core-java Questions:
 
 
-What jdk contains or composed of and define each components?
-What is IDE?
-What are the IDEs available in the market to support java?
-Explain the entire java life cycle.
-what is class?
-What is object?
-What is the entry point of an application?
-Why main is static?
-What is the difference between an Interface and Abstract class?
-Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
-what is Access Specifier?
-What is OOP ? Define each feature of java OOP.
-What is API? Name list of API that you have used so far.
-Does java support multiple inheritance?
-What is method overloading and when it happens?
-What is method overriding and when it happens?
-Explain exceptions in java and how to handle it.
-What is static keyword in java? How it has been used in variables and methods ?
-What is final and how it has been used variables and methods?
-What is final, finally and finalize?
-What is a constructor ?
-What is "this" keyword in java ?
-What is "super" keyword in java?
-What is JVM stand for ?
-What version of java are you using?
-What is JAR stand for ?
-What is compile time and run time?
-What is heap?
-How java manage it's memory?
-What is the difference between String, StringBuffer and StringBuilder?
+1. What jdk contains or composed of and define each components?
+Java Development Kit contains JVM(java Virtual Machine) and JRE(Java Runtime Environment)
+JVM: contains of JVM (classloader, heap, memory, stack, garbage collection). It converts byte code into understandable language in different OS.
+JRE: is an implementation of JVM. JRE contains set of libraries and other file that JVm uses during runtime.
+
+2. What is IDE?
+Integrated development environment
+
+3. What are the IDEs available in the market to support java?
+Eclipse, intelliJ IDEA from JETBRAINS, BlueJ, Netbeans, J-creator used before.
+
+4. Explain the entire java life cycle.
+Source code needed to be compiled into machine code to become an executable program and further need to go thorugh JVM and operating system so that we can read and understand it.
+After source codes(ABC.java) are created, it go through java compiler javac(compiles java file to class file), get compiled into byte codes(ABC.class).
+These bytes codes goes through JVM and get processed into understandable code into the operating system. Java has different
+JVM for different operating system.
+
+5. what is class?
+Class is a blueprint of an object, (blue prints from which objects are created). Collections of objects. Logical entity.
+
+6. What is object?
+Entity that has states and behaviors, is an instance of a class and can be physical and logical entity.
+
+7. What is the entry point of an application?
+When JVM launches, it uses main method to execute java programs (ex. public static void main(String[] args) to start
+the program it must find the main method, otherwise it will throw error.
+
+8. Why main is static?
+static keyword allows to access class properties without creating Object.
+Static is used so that there is no need to create an object to access the class or method.
+When JVM launches, it uses main method to execute java programs (ex. public static void main(String[] args) to start
+the program it must find the main method, otherwise it will throw error.
+
+9. What is the difference between an Interface and Abstract class?
+Interface: used for multiply inheritance. Although Java does not allow multiply inheritance
+a class can implement multiply interfaces. only can have static and final variables and can have only abstract methods
+it cannot implement abstract class
+Abstract:have abstract and non abstract methods, do not support multiply inheritance, and an have final, non-final, static and non static variables
+not full fledged, not a complete class yet, but do have some methods implementation and have some code implementation. In abstract class
+it can implement interface.
+
+10. Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+No
+
+11. what is Access Specifier?
+Access Specifier are public, protected, private etc
+
+12. What is OOP ? Define each feature of java OOP.
+Object oriented programing. All the classes, methods and everything else in a program are developed based on objects.
+Abstraction: Only showing the functionality and hiding details of inside.Abstract class and interface are used for abstraction.
+Encapsulation:Binding different data or codes together like a capsule into a single unit. Java class is an example od encapsulation
+Inheritance: Process of acquiring from one class's properties to another class. When an object carries all properties and behaviors of parent object.
+Makes code more efficient
+Polymorphism: some tasks are done in different ways. Java uses method overloading and overriding for polymorphism
+
+13. What is API? Name list of API that you have used so far.
+Application Programming Interface. BufferedReader, BufferedWriter, FileReader, FileWriter, DataInputStream, StringReader, StringWriter
+
+14. Does java support multiple inheritance?
+No
+
+15. What is method overloading and when it happens?
+Method overloading is an example of compile time polymorphism, happens during compile time.
+Method Overloading: passing different parameters.
+
+16. What is method overriding and when it happens?
+Method overloading is an example of run time time polymorphism, happens during run tome.
+Method Overriding: implementation of method in child class.
+
+17. Explain exceptions in java and how to handle it.
+There are some built-in java class to handle exceptions under input and output package(I/O).
+Need to handle the exception(runtime errors). Sometimes there is error during runtime,
+we need to exit the program by Try and Catch exception handling.
+When there is no errors during compile time with the code use and but detected during runtime. Use of try and catch to handle runtime exception.
+
+18. What is static keyword in java? How it has been used in variables and methods ?
+static keyword allows to access class properties without creating Object. No need to create object to access static methods and it saves memory
+Static method can access only static data. It belongs to the class, not with the object.
+When a variable is declared with the keyword static and all instances share the same copy of the variable, can be accessed directly with
+the class and no need to create instance.
+
+19. What is final and how it has been used variables and methods?
+Final variables are constant. After it is initialized, we cannot change the value of a final variable. ex. final int Max_Number =10000.
+Although final methods of parent class can be called by the sub class, but we cannot override it.
+
+20. What is final, finally and finalize?
+final can be used to mark a variable "unchangeable"
+final can also make a method not "override-able"
+finally is used in a try/catch statement to execute code "always" during run time.
+finalize is called when an object is garbage collected. We rarely need to override it.
+
+21. What is a constructor ?
+Constructor is used to initializing or creating an object.
+
+22. What is "this" keyword in java ?
+"This" keyword is used inside a method or construction as a reference to refer any member of current object from within an instance method or constructor.
+
+23. What is "super" keyword in java?
+"Super" keyword is used to invoke immediate parent class method or constructor and to refer parent class instance variable.
+
+24. What is JVM stand for ?
+Java Virtual Machine
+
+25. What version of java are you using?
+Java Version 1.8.0_60
+build 1.8.0_60-b27
+
+26. What is JAR stand for ?
+Java Archive. It is a zip file that contains many class files and text files
+
+27. What is compile time and run time?
+compile time: when source code is compiled. Source code needed to be compiled into machine code to become an executable program
+run time: When the application is running.
+
+28. What is heap?
+JVm consists of heap, which is a runtime memory allocation. Java object resides in heap
+
+29. How java manage it's memory?
+Java have automatic garbage collection to manage it's memory. All the unreferenced objects are cleared for proper memory allocation
+and to prevent memory leaks.
+
+30. What is the difference between String, StringBuffer and StringBuilder?
+String:
+StringBuffer: is thread safe and it is not possible for two threads to call the methods of StringBuffer simultaneously, but it is less
+efficient than StringBuilder.
+StringBuilder: non-synchronized and not thread safe. It is possible for two threads to call the methods of StringBuilder simultaneously.
+It is more efficient.

@@ -1,31 +1,111 @@
 Please answer the below Data Structure Questions:
 
 why do we need data structure?
+To store and organize information is a computer
+Efficient use of data in programing is very crucial when it is having to do with memory allocation in JVM heap and GC.
+We need to use data structure to make our program such a way so that it does not take much memory and less execution time.
+
 List out the areas in which data structures are applied extensively?
+Database Management, Statistics, Numerical Analysis, Computer gaming and Graphics
+
 what is an Array?
+An array is like a container that holds list of fixed values of same type
+
 what is the difference between the Array and ArrayList?
+Array is static and fixed length data structure, but Arraylist is not
+Length of an array cannot be changed after creating the Array object.
+Length of Arraylist can be changed. Arraylist cannot contain primitive data type.
+
 what is LinkedList?
+Linkedlist: is a data structure that made of a group of nodes to make a sequence.
+
 what is queue?
+A queue is a container of objects (a linear collection) that are inserted and removed according to the first-in first-out (FIFO) principle.
+
 what is stack?
+A stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle
+
 what is FIFO and LIFO?
+FIFO: first in and first out. LIFO: last in first out.
+
 what is the order of complexity?
+The order of a program as the relation between the input size and the execution time.
+
 what is the best case to search an element from an array?
+The best case is that element is found during the first comparison.
+
 what is the worst case to search an element from an array?
+The Worst case is element is found in the last comparison.
+
 what is tree in data structure?
+simulates a hierarchical tree structure that consists parent child relationship.
+
 what is graph in data structure?
+A set of dimensions and arrays with nodes and edges.
+
 what is the difference between the HashTable and HashMap?
+Difference between HashMap & Hashtable is synchronization.
+HashMap is non synchronized and not thread safe.
+HashTable is thread safe and synchronized
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+ RDBMS = Array (i.e. Array of structures)
+ Network data model = Graph
+ Hierarchical data model = Trees
+
 How HashMap works in java?
+HashMap has a inner class called Entry.
+object is stored in Array called table.
+An index of table called bucket and it stores first element of linkedlist.
+It is a data structure which allows us to store object and retrieve it in constant time O(1) provided.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+ArrayIndexOutOfBoundsException is an exception thrown for an array that is not declared. Occurs when trying to access an element of an array that is not declare or it does not exist in the program.
+
 What are the different ways of copying an array into another array?
+
+Use of API functions and an own implementation of an copying algorithm (allocating space for new array;
+
 What is difference between an array and a linked list?
+Array: takes up more memory space because array size is fixed. Inserting and deleting is difficult in array. Elements are stored in consecutive memory location.
+Linked list: takes less space because size is not fixed. Inserting and deleting is difficult in Linked list. Elements may not stored in consecutive memory location.
+
 What is DFS and BFS?
+DFS: Depth First Search
+BFS: Breadth First Search
+DFS and BFS are search algorithm used in trees and graphs.
+
 What is Recursion?
+is a programming techniques in which a method calls itself to solve some problems.
+
 What is Big-(O)-notation?
+Big O notation is used to describe the performance or complexity of an algorithm specially the worse care scenarios.
+
 Outlined different kind of sorting algorithm with time complexity?
+
+Algorithm         Time Complexity
+                 Best            Average           Worst
+Quick sort      O(n log(n))     O(n log(n))       O(n^2)
+Merge sort      O(n log(n))     O(n log(n))       O(n log(n))
+Heap sort       O(n log(n))     O(n log(n))       O(n log(n))
+Bubble sort     O(n)            O(n^2)            O(n^2)
+Insertion sort  O(n)            O(n^2)            O(n^2)
+Selection sort  O(n^2)            O(n^2)          O(n^2)
+Shell sort      O(n)            O(nlog(n))^2)     O(nlog(n))^2)
+Bucket sort     O(n+k)            O(n+k)            O(n^2)
+
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+
+ 	                  Access 	Search 	   Insertion 	Deletion
+Array 	              O(1) 	   O(n) 	    O(n) 	O(n) 	O(1)
+Stack 	              O(n) 	   O(n) 	    O(1) 	O(1) 	O(n)
+Singly-Linked List    O(n) 	   O(n) 	    O(1) 	O(1) 	O(n)
+Doubly-Linked List    O(n) 	   O(n) 	    O(1) 	O(1) 	O(n)
+Skip List 	      O(log(n))    O(log(n)) 	O(log(n)) O(log(n))
+Hash Table 	          - 	    O(1) 	   O(1) 	    O(1)
+BinarySearchTree  O(log(n))    O(log(n))   O(log(n))   O(log(n))
